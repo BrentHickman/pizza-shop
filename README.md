@@ -22,6 +22,7 @@ _ _
 * Open index.html in your browser.
 
 ## Completed Tests
+Test: "It will" Code: Expected output:
 
     Describe: Pizza()
 
@@ -29,7 +30,13 @@ _ _
     Code: new Pizza()
     Expected Output: {size:"",toppings[], qty:0};
 
+    //second test
 
+    Test: "It will add toppings to the 'toppings' array of the Pizza object."
+    Code: Pizza.prototype.addTopping("cheese")
+    Expected Output: 
+
+Test: "It will" Code: Expected output:
 
     Describe: Order()
 
@@ -38,7 +45,9 @@ _ _
     Expected Output: {orderNumber:"",pizza[]};
 
     //second test
-
+    Test: "It will add a new Pizza object to the pizzas property in the Order object"
+    Code: Order.prototype.addPizza(order);
+    Expected Output: Order{Pizzas{order}};
 
 
 
