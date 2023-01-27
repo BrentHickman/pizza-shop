@@ -15,6 +15,10 @@ Pizza.prototype.choseSize = function(size) {
   this.size = size;
 };
 
+Pizza.prototype.choseQty = function(qty) {
+  this.qty = qty;
+}
+
 ///////////////////
 
 function Order(orderNumber) {

@@ -31,7 +31,6 @@ Test: "It will" Code: Expected output:
     Expected Output: {size:"",toppings[], qty:0};
 
     //second test
-
     Test: "It will add toppings to the 'toppings' array of the Pizza object."
     Code: Pizza.addTopping("cheese")
     Expected Output: Pizza {toppings:["cheese"]}
@@ -41,6 +40,10 @@ Test: "It will" Code: Expected output:
     Code: Pizza.choseSize("large")
     Expected output:Pizza {size:"large"}
 
+    //fourth test
+    Test: "It will add qty to the Pizza object." 
+    Code: Pizza.choseQty(1);
+    Expected output:Pizza {qty: 1}
 
     Describe: Order()
 
