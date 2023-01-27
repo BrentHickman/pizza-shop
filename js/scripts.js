@@ -1,10 +1,14 @@
 const myPizza = new Pizza();
+
+//business logic -----------
+
 ///////////////////
 
 function Pizza(size, qty) {
   this.size = size;
   this.toppings = [];
   this.qty = qty;
+  this.id = 0;
 }
 
 Pizza.prototype.addTopping = function(topping) {
@@ -19,13 +23,24 @@ Pizza.prototype.choseQty = function(qty) {
   this.qty = qty;
 }
 
+Pizza.prototype.assignId = function() {
+  this.id += 1;
+  return this.id;
+};
 ///////////////////
 
-function Order(orderNumber) {
-  this.orderNumber = orderNumber;
+function Order(name) {
   this.pizzas = {};
+  this.name = name
 }
 
 Order.prototype.addPizza = function(pizza) {
-  this.pizzas[pizza.size] = pizza;
+  this.pizzas[pizza.id] = pizza;
 }
+
+
+
+
+
+
+//ui logic -----------

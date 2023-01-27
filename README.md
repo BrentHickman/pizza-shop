@@ -56,6 +56,11 @@ Test: "It will" Code: Expected output:
     Code: Order.prototype.addPizza(order);
     Expected Output: Order{Pizzas{order}};
 
+    //third test
+    Test: "It will add a name property to Orders, this will replace 'order number" 
+    Code: new Order('name');
+    Expected output: Order {name: 'name'}
+
 
 
 
