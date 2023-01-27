@@ -8,7 +8,7 @@ function Pizza(size, qty) {
   this.size = size;
   this.toppings = [];
   this.qty = qty;
-  // this.id = 0;
+  this.id = 0;
 }
 
 Pizza.prototype.addTopping = function(topping) {
@@ -23,10 +23,10 @@ Pizza.prototype.choseQty = function(qty) {
   this.qty = qty;
 }
 
-// Pizza.prototype.assignId = function() {
-//   this.id += 1;
-//   return this.id;
-// };
+Pizza.prototype.assignId = function() {
+  this.id += 1;
+  return this.id;
+};
 ///////////////////
 
 function Order(name) {

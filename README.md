@@ -45,6 +45,11 @@ Test: "It will" Code: Expected output:
     Code: Pizza.choseQty(1);
     Expected output:Pizza {qty: 1}
 
+    //fifth test
+    Test: "It will add an id to Pizza object"
+    Code: myPizza.assignId();
+    Expected output: myPizza {id:1}
+
     Describe: Order()
 
     Test: "It will create an Order object that will hold an array of Pizzas"
