@@ -1,0 +1,3 @@
+function Order() {
+  this.pizza = [];
+}
