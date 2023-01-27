@@ -1,15 +1,15 @@
 const myPizza = new Pizza();
 ///////////////////
 
-function Pizza(size, toppings, qty) {
+function Pizza(size, qty) {
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
   this.qty = qty;
 }
 
-// Pizza.prototype.addTopping = function(topping) {
-//   this.toppings.push(topping);
-// };
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings.push(topping);
+};
 
 ///////////////////
 

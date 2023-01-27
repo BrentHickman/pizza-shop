@@ -33,10 +33,9 @@ Test: "It will" Code: Expected output:
     //second test
 
     Test: "It will add toppings to the 'toppings' array of the Pizza object."
-    Code: Pizza.prototype.addTopping("cheese")
-    Expected Output: 
+    Code: Pizza.addTopping("cheese")
+    Expected Output: Pizza {toppings:["cheese"]}
 
-Test: "It will" Code: Expected output:
 
     Describe: Order()
 
