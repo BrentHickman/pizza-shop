@@ -1,4 +1,4 @@
-const myPizza = new Pizza(1,["cheese", "pepperoni"], 1);
+const myPizza = new Pizza(2,["cheese", "pepperoni"], 1);
 
 //business logic -----------
 
@@ -31,6 +31,7 @@ Pizza.prototype.calcPrice = function() {
 
   finalPrice += sizePrice;
   finalPrice += toppingsPrice;
+  finalPrice *= this.qty;
   this.Price = finalPrice;
   return finalPrice;
 }

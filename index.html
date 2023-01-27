@@ -7,6 +7,39 @@
   <title>Pepper's Pizza</title>
 </head>
 <body>
-  
+  <form id="orderForm">
+    <P>Place an Order</P>
+    <input type="text" name="orderName" id="orderName">
+    <label for="orderName">Name for Order</label>
+    <br>
+    <p>-Size-</p>
+    <input type="radio" name="size" id="small" [value]="1">Small
+    <input type="radio" name="size" id="med" [value]="2">Med
+    <input type="radio" name="size" id="large" [value]="3">Large
+    <br>
+    <p>-Toppings-</p>
+    <div id="toppings">
+      <input type="checkbox" name="cheese" id="cheese">
+      <label for="cheese">Cheese</label>
+      <input type="checkbox" name="pepperoni" id="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+      <input type="checkbox" name="mushrooms" id="mushrooms">
+      <label for="mushrooms">Mushrooms</label>
+      <input type="checkbox" name="onions" id="onions">
+      <label for="onions">Onions</label>
+      <input type="checkbox" name="sausage" id="sausage">
+      <label for="sausage">Sausage</label>
+      <input type="checkbox" name="jalapeno" id="jalapeno">
+      <label for="jalapeno">Jalapeño</label>
+      <input type="checkbox" name="pineapple" id="pineapple">
+      <label for="pineapple">Pineapple</label>
+    </div>
+    <br>
+    <input type="number" name="qty">
+    <label for="qty">Quantity</label>
+    <br>
+    <br>
+    <input type="submit" value="Place Order">
+  </form>
 </body>
 </html>

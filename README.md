@@ -22,7 +22,6 @@ _ _
 * Open index.html in your browser.
 
 ## Completed Tests
-Test: "It will" Code: Expected output:
 
     Describe: Pizza()
 
@@ -53,12 +52,12 @@ Test: "It will" Code: Expected output:
     //sixth test
     Test: "It will change size input to a number for future price method and check to see if a size has been selected" 
     Code: Pizza.choseSize()
-    Expected output:
+    Expected output: true
 
     //seventh test
     Test: "It will calculate pizza price by size, number of toppings and qty" 
     Code: Pizza.calcPrice()
-    Expected output:
+    Expected output: price
 
     Describe: Order()
 
