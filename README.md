@@ -26,22 +26,20 @@ _ _
     Describe: Pizza()
 
     Test: "It will create a Pizza object that will hold an order number, an array of toppings, one size and one quantity"
-    Code: new Pizza(orderNumber)
-    Expected Output: {orderNumber,size:"",toppings[], qty:0};
+    Code: new Pizza()
+    Expected Output: {size:"",toppings[], qty:0};
 
 
 
     Describe: Order()
 
     Test: "It will create an Order object that will hold an array of Pizzas"
-    Code: new Order()
-    Expected Output: {pizza[]};
+    Code: new Order(orderNumber)
+    Expected Output: {orderNumber:"",pizza[]};
 
     //second test
 
-    Test: "It will ..."
-    Code: 
-    Expected Output:
+
 
 
 
