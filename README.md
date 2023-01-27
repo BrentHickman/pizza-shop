@@ -36,6 +36,11 @@ Test: "It will" Code: Expected output:
     Code: Pizza.addTopping("cheese")
     Expected Output: Pizza {toppings:["cheese"]}
 
+    //third test
+    Test: "It will add size to the Pizza object." 
+    Code: Pizza.choseSize("large")
+    Expected output:Pizza {size:"large"}
+
 
     Describe: Order()
 
