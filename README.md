@@ -56,7 +56,9 @@ Test: "It will" Code: Expected output:
     Expected output:
 
     //seventh test
-    Test: "It will" Code: Expected output:
+    Test: "It will calculate pizza price by size, number of toppings and qty" 
+    Code: Pizza.calcPrice()
+    Expected output:
 
     Describe: Order()
 
