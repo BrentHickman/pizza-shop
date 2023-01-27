@@ -14,9 +14,13 @@ function Pizza(size, qty) {
 Pizza.prototype.addTopping = function(topping) {
   this.toppings.push(topping);
 };
-
+//small = 1 med = 2 large = 3
 Pizza.prototype.choseSize = function(size) {
+  if (size !==1 || size !==2 || size !== 3){
+    return false;
+  }
   this.size = size;
+  return true;
 };
 
 Pizza.prototype.choseQty = function(qty) {

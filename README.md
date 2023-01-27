@@ -50,6 +50,14 @@ Test: "It will" Code: Expected output:
     Code: myPizza.assignId();
     Expected output: myPizza {id:1}
 
+    //sixth test
+    Test: "It will change size input to a number for future price method and check to see if a size has been selected" 
+    Code: Pizza.choseSize()
+    Expected output:
+
+    //seventh test
+    Test: "It will" Code: Expected output:
+
     Describe: Order()
 
     Test: "It will create an Order object that will hold an array of Pizzas"
