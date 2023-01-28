@@ -1,5 +1,4 @@
-// const myPizza = new Pizza(2,["cheese", "pepperoni"], 1);
-
+let myOrder = new Order();
 //business logic -----------
 
 ///////////////////
@@ -32,7 +31,7 @@ Pizza.prototype.calcPrice = function() {
   finalPrice += sizePrice;
   finalPrice += toppingsPrice;
   finalPrice *= this.qty;
-  this.Price = finalPrice;
+  this.price = finalPrice;
   return finalPrice;
 }
 
@@ -40,23 +39,27 @@ Pizza.prototype.choseQty = function(qty) {
   this.qty = qty;
 }
 
-Pizza.prototype.assignId = function() {
+
+///////////////////
+
+function Order() {
+  this.pizzas = {};
+  this.id = 0;
+}
+
+Order.prototype.assignId = function() {
   this.id += 1;
   return this.id;
 };
-///////////////////
-
-function Order(name) {
-  this.pizzas = {};
-  this.name = name
-}
 
 Order.prototype.addPizza = function(pizza) {
+  pizza.id = this.assignId();
   this.pizzas[pizza.id] = pizza;
 }
 
 
 //ui logic -----------
+
 
 
 
@@ -79,14 +82,8 @@ function onSubmit(event){
       toppingArray,
       document.getElementById("qty").value,
       );
-
-  // Order.addPizza(newOrder);
+      
+  myOrder.addPizza(newOrder);
+  newOrder.calcPrice(myOrder.Id);
+  console.log(newOrder.price);
 };
-
-
-var array = []
-var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-
-for (var i = 0; i < checkboxes.length; i++) {
-  array.push(checkboxes[i].value)
-}
