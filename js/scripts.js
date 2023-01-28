@@ -1,4 +1,4 @@
-const myPizza = new Pizza(2,["cheese", "pepperoni"], 1);
+// const myPizza = new Pizza(2,["cheese", "pepperoni"], 1);
 
 //business logic -----------
 
@@ -56,8 +56,37 @@ Order.prototype.addPizza = function(pizza) {
 }
 
 
-
-
-
-
 //ui logic -----------
+
+
+
+window.addEventListener("load", function(){
+  document.getElementById("orderForm").addEventListener("submit", onSubmit);
+});
+
+function onSubmit(event){
+  event.preventDefault();
+  let toppingArray = [];
+  let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
+  for (i = 0; i < checkboxes.length; i++) {
+    toppingArray.push(checkboxes[i].value)
+  }
+  let sizeChoice = document.querySelector("input[type=radio]:checked").value;
+  let sizeToNum = parseInt(sizeChoice);
+
+  let newOrder = new Pizza(
+      sizeToNum,
+      toppingArray,
+      document.getElementById("qty").value,
+      );
+
+  // Order.addPizza(newOrder);
+};
+
+
+var array = []
+var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+for (var i = 0; i < checkboxes.length; i++) {
+  array.push(checkboxes[i].value)
+}

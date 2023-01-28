@@ -13,33 +13,34 @@
     <label for="orderName">Name for Order</label>
     <br>
     <p>-Size-</p>
-    <input type="radio" name="size" id="small" [value]="1">Small
-    <input type="radio" name="size" id="med" [value]="2">Med
-    <input type="radio" name="size" id="large" [value]="3">Large
+    <input type="radio" name="size" id="small" value="1">Small
+    <input type="radio" name="size" id="med" value="2">Med
+    <input type="radio" name="size" id="large" value="3">Large
     <br>
     <p>-Toppings-</p>
     <div id="toppings">
-      <input type="checkbox" name="cheese" id="cheese">
+      <input type="checkbox" name="cheese" id="cheese" class="toppings" value="cheese">
       <label for="cheese">Cheese</label>
-      <input type="checkbox" name="pepperoni" id="pepperoni">
+      <input type="checkbox" name="pepperoni" id="pepperoni" class="toppings" value="pepperoni">
       <label for="pepperoni">Pepperoni</label>
-      <input type="checkbox" name="mushrooms" id="mushrooms">
+      <input type="checkbox" name="mushrooms" id="mushrooms" class="toppings" value="mushrooms">
       <label for="mushrooms">Mushrooms</label>
-      <input type="checkbox" name="onions" id="onions">
+      <input type="checkbox" name="onions" id="onions" class="toppings" value="Onions">
       <label for="onions">Onions</label>
-      <input type="checkbox" name="sausage" id="sausage">
+      <input type="checkbox" name="sausage" id="sausage" class="toppings" value="sausage">
       <label for="sausage">Sausage</label>
-      <input type="checkbox" name="jalapeno" id="jalapeno">
+      <input type="checkbox" name="jalapeno" id="jalapeno" class="toppings" value="jalapeno">
       <label for="jalapeno">Jalapeño</label>
-      <input type="checkbox" name="pineapple" id="pineapple">
+      <input type="checkbox" name="pineapple" id="pineapple"class="toppings" value="pineapple">
       <label for="pineapple">Pineapple</label>
     </div>
     <br>
-    <input type="number" name="qty">
+    <input type="number" name="qty" id="qty">
     <label for="qty">Quantity</label>
     <br>
     <br>
     <input type="submit" value="Place Order">
   </form>
+  <div id="finalCost"></div>
 </body>
 </html>
