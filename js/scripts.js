@@ -60,7 +60,45 @@ Order.prototype.addPizza = function(pizza) {
 
 //ui logic -----------
 
+function showOrder(){
+  let sizetoTranslate = myOrder.pizzas[1].size;
+  let translatedSize = "";
+  let sizeTranslate = function(sizetoTranslate){
+    if (sizetoTranslate ==1){
+      let translatedSize = "Small";
+      return translatedSize;
+    }
+    else if (sizetoTranslate ==2){
+      let translatedSize = "Medium";
+      return translatedSize;
+    }
+    else if (sizetoTranslate ==3){
+      let translatedSize = "Large";
+      return translatedSize;
+    }
+    return false;
+  };
 
+  let newOrder = document.createElement("li");
+  newOrder.innerText =  "My Order";
+  document.getElementById("showOrder").append(newOrder);
+  
+  let newOrderSize = document.createElement("li");
+  newOrderSize.innerText =  "Size: " + sizeTranslate(sizetoTranslate);
+  document.getElementById("showOrder").append(newOrderSize);
+
+  let newOrderToppings = document.createElement("li");
+  newOrderToppings.innerText =  "Toppings: " + myOrder.pizzas[1].toppings.toString(); 
+  document.getElementById("showOrder").append(newOrderToppings);
+
+  let newOrderQty = document.createElement("li");
+  newOrderQty.innerText =  "Quantity: " + myOrder.pizzas[1].qty.toString();
+  document.getElementById("showOrder").append(newOrderQty);
+
+  let newOrderPrice = document.createElement("li");
+  newOrderPrice.innerText =  "Price: $" + myOrder.pizzas[1].price.toString();
+  document.getElementById("showOrder").append(newOrderPrice);
+}
 
 
 window.addEventListener("load", function(){
@@ -86,4 +124,5 @@ function onSubmit(event){
   myOrder.addPizza(newOrder);
   newOrder.calcPrice(myOrder.Id);
   console.log(newOrder.price);
+  showOrder(myOrder);
 };
